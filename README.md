@@ -1,5 +1,8 @@
 # zk-codemirror
-Integration of Codemirror library in ZK 7 framework
+Integration of Codemirror library for ZK 7 framework
+
+This project provides an integration of the original CodeMirror-Library (developed by Marijn Haverbeke on [http://codemirror.net](http://codemirror.net)) for the [ZK7-framework](http://zkoss.org).</br>
+What is CodeMirror? "CodeMirror is a JavaScript library that can be used to create a relatively pleasant editor interface for code-like content - computer programs, HTML markup, and similar. If a parser has been written for the language you are editing (see below for a list of supported languages), the code will be coloured, and the editor will help you with indentation." (Quote from http://codemirror.net)
 
 ##Usage
 
