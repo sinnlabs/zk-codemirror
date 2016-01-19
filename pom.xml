@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>zk-codemirror</groupId>
 	<artifactId>org.sinnlabs.zk.codemirror</artifactId>
-	<version>0.1</version>
+	<version>0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>ZK Codemirror</name>
@@ -19,8 +19,8 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/sinnlabs/zk-codemirror/tags/0.1</url>
-		<connection>scm:git:https://github.com/sinnlabs/zk-codemirror.git/tags/0.1</connection>
+		<url>https://github.com/sinnlabs/zk-codemirror/tags/org.sinnlabs.zk.codemirror-0.1</url>
+		<connection>scm:git:git://github.com/sinnlabs/zk-codemirror.git/tags/org.sinnlabs.zk.codemirror-0.1</connection>
 	</scm>
 
 	<developers>
