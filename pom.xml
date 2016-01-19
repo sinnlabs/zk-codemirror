@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>zk-codemirror</groupId>
 	<artifactId>org.sinnlabs.zk.codemirror</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<packaging>jar</packaging>
 
 	<name>ZK Codemirror</name>
