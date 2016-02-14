@@ -101,32 +101,44 @@
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 				<dependencies>
-        <dependency>
-          <groupId>org.apache.maven.scm</groupId>
-          <artifactId>maven-scm-provider-gitexe</artifactId>
-          <version>1.8.1</version>
-        </dependency>
-       </dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 			
 			<plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <configuration>
-                            <passphrase>${gpg.passphrase}</passphrase>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <configuration>
+                    <passphrase>${gpg.passphrase}</passphrase>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<includes>
+					<include>metainfo/**/*.*</include>
+					<include>web/**/*.*</include>
+				</includes>
+				<excludes>
+					<exclude>zk</exclude>
+				</excludes>
+			</resource>
+		</resources>
 	</build>
 	
 	<!--<profiles>

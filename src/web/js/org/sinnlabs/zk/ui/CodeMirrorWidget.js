@@ -75,6 +75,13 @@ zk.$package('org.sinnlabs.zk.ui');
 					startOnChanging_(wgt);
 				});
 				this._multiline = true;
+				zWatch.listen({onSize: this});
+				this.refresh();
+			},
+			
+			unbind_: function () {
+				this.$supers('unbind_', arguments);
+				zWatch.unlisten({onSize: this});
 			},
 
 			fireOnChange: function () {
@@ -83,8 +90,8 @@ zk.$package('org.sinnlabs.zk.ui');
 				this.fire('onChange', {value: val}, {toServer: true});
 			},
 			
-			onSize_: function (e) {
-				_codemirror.refresh();
+			onSize: function (e) {
+				this.refresh();
 			},
 			
 			setMode: function (val) {
@@ -98,6 +105,12 @@ zk.$package('org.sinnlabs.zk.ui');
 			
 			getMode: function() {
 				return _mode;
-			} 
+			},
+			
+			refresh: function() {
+				$('.CodeMirror').each(function(i, el){
+				    el.CodeMirror.refresh();
+				});
+			}
 		});
 })();
