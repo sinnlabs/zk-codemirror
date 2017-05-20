@@ -22,6 +22,10 @@
         <version-uid>0.0.1</version-uid>
         <zk-version>7.0.0</zk-version><!-- or later -->
     </version> 
+    
+    <!-- ~. means \src\main\resources\web -->
+    <stylesheet href="~./js/org/sinnlabs/zk/ui/mode/tiddlywiki.css" type="text/css"/>
+    <stylesheet href="~./js/org/sinnlabs/zk/ui/mode/tiki.css" type="text/css"/>
 
     <!-- define a component -->
     <component>
