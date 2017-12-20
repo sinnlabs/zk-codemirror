@@ -21,6 +21,18 @@ What is CodeMirror? "CodeMirror is a JavaScript library that can be used to crea
 </window>
 ```
 
+## Maven
+
+Add the following block to the dependencies
+
+```xml
+<dependency>
+	<groupId>org.sinnlabs</groupId>
+	<artifactId>zk-codemirror</artifactId>
+	<version>0.1</version>
+</dependency>
+```
+
 ## Supported modes
 
 *  HTML mode = "text/html";

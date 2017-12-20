@@ -45,22 +45,26 @@ zk.$package('org.sinnlabs.zk.ui');
 			_codemirror: null,
 			
 			_mode: "text/html",
+			
+			// For some mysterious reason initial value must not be true, 
+			// otherwise showing line numbers won't be runtime on/off switchable. 
+			_lineNumbers: false, 
 
 			$init: function () { 
 				this.$supers('$init', arguments);
-				zWatch.listen({onSize: [this, this.onSize_]});
+				//zWatch.listen({onSize: [this, this.onSize_]});
 			},
 
 			bind_: function (dt, skipper, after) {
 				this.$supers('bind_', arguments);
 				var wgt = this;
-				_codemirror =  CodeMirror.fromTextArea(this.$n('codemirror'), {
-					lineNumbers: true,
+				this._codemirror = CodeMirror.fromTextArea(this.$n('codemirror'), {
+					lineNumbers: wgt._lineNumbers,
 					mode: wgt._mode,
 					matchBrackets: true
 				});
-				_codemirror.on('blur', function () {
-					var val = _codemirror.getValue();
+				this._codemirror.on('blur', function () {
+					var val = wgt._codemirror.getValue();
 					wgt.setValue(val);
 					if (wgt._tChg) {
 						clearTimeout(wgt._tChg);
@@ -68,36 +72,62 @@ zk.$package('org.sinnlabs.zk.ui');
 					}
 					wgt.fireOnChange();
 				});
-				_codemirror.on('keydown', function (evnt) {
+				this._codemirror.on('keydown', function (evnt) {
 					stopOnChanging_(wgt); //wait for key up
 				});
-				_codemirror.on('keyup', function (evnt) {
+				this._codemirror.on('keyup', function (evnt) {
 					startOnChanging_(wgt);
 				});
 				this._multiline = true;
+				zWatch.listen({onSize: this});
+				this.refresh();
+			},
+			
+			unbind_: function () {
+				this.$supers('unbind_', arguments);
+				zWatch.unlisten({onSize: this});
 			},
 
 			fireOnChange: function () {
-				var val = _codemirror.getValue();
+				var val = this._codemirror.getValue();
 				this.setValue(val);
 				this.fire('onChange', {value: val}, {toServer: true});
 			},
 			
-			onSize_: function (e) {
-				_codemirror.refresh();
+			onSize: function () {
+				this.refresh();
 			},
 			
 			setMode: function (val) {
 				if (this._mode != val) {
 					this._mode = val;
 					if (this._codemirror) {
-						_codemirror.setOption("mode", _mode);
+						this._codemirror.setOption("mode", this._mode);
 					}
 				}
 			},
 			
 			getMode: function() {
-				return _mode;
-			} 
+				return this._mode;
+			},
+			
+			setLineNumbers: function (val) {
+                if (this._lineNumbers != val) {
+                    this._lineNumbers = val;
+                    if (this._codemirror) {
+                        this._codemirror.setOption("lineNumbers", this._lineNumbers);
+                    }
+                }
+            },
+            
+            getLineNumbers: function() {
+                return this._lineNumbers;
+            },
+			
+			refresh: function() {
+				$('.CodeMirror').each(function(i, el) {
+				    el.CodeMirror.refresh();
+				});
+			}
 		});
 })();
