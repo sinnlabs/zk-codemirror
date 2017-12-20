@@ -111,6 +111,13 @@ zk.$package('org.sinnlabs.zk.ui');
 				return this._mode;
 			},
 			
+			setValue: function(txt) {
+				this.$supers('setValue', arguments);
+				if (this._codemirror) {
+					this._codemirror.setValue(this.getValue());
+				}
+			},
+			
 			setLineNumbers: function (val) {
                 if (this._lineNumbers != val) {
                     this._lineNumbers = val;
