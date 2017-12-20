@@ -29,7 +29,7 @@ public class CodeMirror extends Textbox {
 	
 	public static final String TEXT_HTML = "text/html";
 	
-	public static final String JAVA = "x-java";
+	public static final String JAVA = "text/x-java";
 	
 	public static final String JAVASCRIPT = "text/javascript";
 	
