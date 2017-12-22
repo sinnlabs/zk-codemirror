@@ -111,10 +111,11 @@ zk.$package('org.sinnlabs.zk.ui');
 				return this._mode;
 			},
 			
-			setValue: function(txt) {
+			setValue: function(txt, fromserver) {
 				this.$supers('setValue', arguments);
 				if (this._codemirror) {
-					this._codemirror.setValue(this.getValue());
+					if (fromserver) // Fix chrome browser bug
+						this._codemirror.setValue(this.getValue());
 				}
 			},
 			
