@@ -29,14 +29,14 @@ Add the following block to the dependencies
 <dependency>
 	<groupId>org.sinnlabs</groupId>
 	<artifactId>zk-codemirror</artifactId>
-	<version>0.3</version>
+	<version>0.4</version>
 </dependency>
 ```
 
 ## Supported modes
 
 *  HTML mode = "text/html";
-*  JAVA mode = "x-java";
+*  JAVA mode = "text/x-java";
 *  JAVASCRIPT mode = "text/javascript";
 *  C mode = "text/x-csrc";
 *  CPP mode = "text/x-c++src";
