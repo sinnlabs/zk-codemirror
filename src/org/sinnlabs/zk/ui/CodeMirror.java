@@ -73,6 +73,8 @@ public class CodeMirror extends Textbox {
 
 	public static final String TIKI_WIKI = "text/tiki";
 
+	public static final String ASCIIDOC = "text/asciidoc";
+
 	/**
 	 * Based on codemirror\mode\meta.js
 	 */
@@ -135,6 +137,10 @@ public class CodeMirror extends Textbox {
         Set<String> tikiExts = new HashSet<String>();
         tikiExts.addAll(Arrays.asList("tiki", "wiki"));
         modeExtensions.put("tiki", tikiExts);
+
+        Set<String> asciidocExts = new HashSet<String>();
+        asciidocExts.add("adoc");
+        modeExtensions.put("asciidoc", asciidocExts);
 
 	}
 

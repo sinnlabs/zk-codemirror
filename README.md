@@ -52,3 +52,4 @@ Add the following block to the dependencies
 *  SCSS mode = "text/x-scss";
 *  LESS mode = "text/x-less";
 *  XML mode = "application/xml";
+*  ASCIIDOC mode = "text/asciidoc";
