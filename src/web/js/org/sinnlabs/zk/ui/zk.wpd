@@ -9,5 +9,6 @@
     <script src="mode/clike.js" />
     <script src="mode/tiddlywiki.js" />
     <script src="mode/tiki.js" />
+    <script src="mode/asciidoc.js" />
     <widget name="CodeMirrorWidget"/>
 </package>
