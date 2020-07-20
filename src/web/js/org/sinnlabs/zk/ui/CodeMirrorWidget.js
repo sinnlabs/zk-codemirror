@@ -63,6 +63,7 @@ zk.$package('org.sinnlabs.zk.ui');
 					mode: wgt._mode,
 					matchBrackets: true
 				});
+				this._codemirror.setValue(this.getValue());
 				this._codemirror.on('blur', function () {
 					var val = wgt._codemirror.getValue();
 					wgt.setValue(val);
