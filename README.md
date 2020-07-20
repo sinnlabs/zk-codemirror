@@ -29,7 +29,7 @@ Add the following block to the dependencies
 <dependency>
 	<groupId>org.sinnlabs</groupId>
 	<artifactId>zk-codemirror</artifactId>
-	<version>0.4</version>
+	<version>0.5</version>
 </dependency>
 ```
 
