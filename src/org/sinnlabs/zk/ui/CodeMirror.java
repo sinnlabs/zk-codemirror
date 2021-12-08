@@ -74,6 +74,29 @@ public class CodeMirror extends Textbox {
 	public static final String TIKI_WIKI = "text/tiki";
 
 	public static final String ASCIIDOC = "text/asciidoc";
+	
+	public static final String SQL = "text/x-sql";
+
+	public static final String MYSQL = "text/x-mysql";
+
+	public static final String MARIADB = "text/x-mariadb";
+
+	public static final String CASANDRA = "text/x-cassandra";
+	
+	public static final String PLSQL = "text/x-plsql";
+	
+	public static final String MSSQL = "text/x-mssql";
+	
+	public static final String HIVE = "text/x-hive";
+	
+	public static final String PGSL = "text/x-pgsql";
+	
+	public static final String GQL = "text/x-gql";
+	
+	public static final String GQSQL = "text/x-gpsql";
+	
+	public static final String ESPER = "text/x-esper";
+	
 
 	/**
 	 * Based on codemirror\mode\meta.js
