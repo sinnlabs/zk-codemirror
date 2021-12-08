@@ -29,7 +29,7 @@ Add the following block to the dependencies
 <dependency>
 	<groupId>org.sinnlabs</groupId>
 	<artifactId>zk-codemirror</artifactId>
-	<version>0.5</version>
+	<version>0.7</version>
 </dependency>
 ```
 
@@ -53,3 +53,14 @@ Add the following block to the dependencies
 *  LESS mode = "text/x-less";
 *  XML mode = "application/xml";
 *  ASCIIDOC mode = "text/asciidoc";
+*  SQL mode = "text/x-sql";
+*  MYSQL mode = "text/x-mysql";
+*  MARIADB mode = "text/x-mariadb";
+*  CASANDRA mode = "text/x-cassandra";
+*  PLSQL mode = "text/x-plsql";
+*  MSSQL mode = "text/x-mssql";
+*  HIVE mode = "text/x-hive";
+*  PGSL mode = "text/x-pgsql";
+*  GQL mode = "text/x-gql";
+*  GQSQL mode = "text/x-gpsql";
+*  ESPER mode = "text/x-esper";
