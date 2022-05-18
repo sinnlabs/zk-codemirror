@@ -11,5 +11,6 @@
     <script src="mode/tiki.js" />
     <script src="mode/asciidoc.js" />
     <script src="mode/sql.js" />
+    <script src="mode/groovy.js" />
     <widget name="CodeMirrorWidget"/>
 </package>
