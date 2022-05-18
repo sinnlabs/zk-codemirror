@@ -97,6 +97,8 @@ public class CodeMirror extends Textbox {
 	
 	public static final String ESPER = "text/x-esper";
 	
+	public static final String GROOVY = "text/x-groovy";
+	
 
 	/**
 	 * Based on codemirror\mode\meta.js

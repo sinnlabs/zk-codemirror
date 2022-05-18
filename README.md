@@ -64,3 +64,4 @@ Add the following block to the dependencies
 *  GQL mode = "text/x-gql";
 *  GQSQL mode = "text/x-gpsql";
 *  ESPER mode = "text/x-esper";
+*  GROOVY mode = "text/x-groovy";
