@@ -16,5 +16,5 @@ package org.sinnlabs.zk.codemirror;
  *
  */
 public class Version {
-	public static final String UID = "0.7";
+	public static final String UID = "0.8";
 }
